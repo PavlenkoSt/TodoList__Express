@@ -4,22 +4,26 @@
         {{#if todos.length}}
             <ul>
                 {{#each todos}}
-                    <li>
-                        <label>
-                            <input 
-                                {{#if completed}} 
-                                    checked 
-                                {{/if}} 
-                                type="checkbox"
-                            />
-                            <span>{{title}}</span>
-                            <button class="btn btn-small">Save</button>
-                        </label>
+                    <li class="list-item">
+                        <form method="post">
+                            <label>
+                                <input 
+                                    {{#if done}} 
+                                        checked='checked'
+                                    {{/if}} 
+                                    type="checkbox"
+                                    name="completed"
+                                />
+                                <span class="list-title">{{title}}</span>
+                                <input type="hidden" name="id" value="{{_id}}"/>
+                                <button type="submit" class="btn btn-small"><i class="material-icons left">save</i>Save</button>
+                            </label>
+                        </form>
                     </li>
                 {{/each}}
             </ul>
         {{else}}
-            <p class="no-todos">No todos yet</p>
+            <p class="no-todos">No todos yet!</p>
         {{/if}}
     </div>
 </div>

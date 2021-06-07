@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const path = require('path')
 const exphbs = require('express-handlebars')
 const router = require('./router')
 
@@ -14,7 +15,8 @@ app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
 
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.urlencoded({ extended: true }))
 app.use(router)
 
 const PORT = process.env.PORT || 8888

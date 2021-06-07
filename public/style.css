@@ -42,3 +42,25 @@ body{
     color: rgb(61, 61, 61);
     font-size: 18px;
 }
+
+.list-item{
+    width: 100%;
+    background-color: rgb(214, 214, 214);
+    margin-bottom: 10px;
+    padding: 16px;
+}
+
+.list-item label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-item:last-child{
+    margin-bottom: 0;
+}
+
+.list-title{
+    color: rgb(61, 61, 61);
+    font-size: 18px !important;
+}

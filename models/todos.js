@@ -1,11 +1,11 @@
 const { Schema, model } = require('mongoose')
 
-const schema = Schema({
+const schema = new Schema({
     title: {
         type: String,
         required: true
     },
-    completed: {
+    done: {
         type: Boolean,
         default: false
     }
