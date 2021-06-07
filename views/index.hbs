@@ -1,0 +1,25 @@
+<div class="section">
+    <div class="container">
+        <h2 class="title">Todos</h2>
+        {{#if todos.length}}
+            <ul>
+                {{#each todos}}
+                    <li>
+                        <label>
+                            <input 
+                                {{#if completed}} 
+                                    checked 
+                                {{/if}} 
+                                type="checkbox"
+                            />
+                            <span>{{title}}</span>
+                            <button class="btn btn-small">Save</button>
+                        </label>
+                    </li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p class="no-todos">No todos yet</p>
+        {{/if}}
+    </div>
+</div>

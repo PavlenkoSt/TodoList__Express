@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(236, 236, 236);
+    font-family: 'Teko', sans-serif;
+    font-size: 18px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+.logo{
+    height: 60px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-size: 28px;
+    color: rgb(61, 61, 61);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.nav-link{
+    font-size: 24px;
+}
+
+.nav-link.active{
+    background-color: #208b81;
+}
+
+.no-todos{
+    color: rgb(61, 61, 61);
+    font-size: 18px;
+}

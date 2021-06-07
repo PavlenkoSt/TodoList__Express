@@ -1,0 +1,27 @@
+<header class="header">
+    <nav class="teal lighten-1">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">
+                <img class="logo" src="img/logo.svg" alt="Todos">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a 
+                        {{#if isIndex}} 
+                            class="nav-link active" 
+                        {{else}} 
+                            class="nav-link" 
+                        {{/if}} 
+                        href="/"
+                    >Todos</a></li>
+                <li><a
+                        {{#if isAdd}} 
+                            class="nav-link active" 
+                        {{else}} 
+                            class="nav-link" 
+                        {{/if}} 
+                        href="/add"
+                    >Add todo</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
